@@ -19,6 +19,12 @@
   z-index: 1;
 }
 
+
+.slider.active {
+display: none !important;
+}
+
+
 .slide_img {
   width: 50%;
   background-size: contain;
