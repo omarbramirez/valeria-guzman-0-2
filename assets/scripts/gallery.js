@@ -110,3 +110,40 @@ carrousel.addEventListener('click', function(e) {
   };
 
 });
+
+
+const slider = document.querySelector("#main_slider");
+var slide = document.querySelector(".slide");
+const nav = document.getElementById("sliderNav");
+const [...dots] = document.getElementsByClassName("dot");
+const [...sliders] = document.getElementsByClassName("slide");
+
+const hamburger = document.querySelector("#hamburger");
+const menu = document.querySelector("#menu_options");
+const header = document.querySelector("header");
+const submenuSelector = document.querySelector("#arrow");
+const submenu = document.querySelector("#submenu_options");
+const [...content] = document.getElementsByClassName("content");
+const footer = document.querySelector("#footer");
+const _footer = document.querySelector("#main_footer");
+const logoFooter = document.querySelector("#logo_footer");
+
+
+
+/*DEPLOY RESPOSNIVE MOBILE MENU*/
+hamburger.addEventListener ("click", function(e) {
+  console.log('working');
+  e.preventDefault();
+  menu.classList.toggle('active');
+  header.classList.toggle('active');
+  content.map(e=> e.classList.toggle('active'));
+  if(footer) footer.classList.toggle('active');
+  if(_footer) _footer.classList.toggle('active');
+  if(logoFooter) logoFooter.classList.toggle('active');
+});
+/*DEPLOY RESPOSNIVE MOBILE SUB-MENU*/
+submenuSelector.addEventListener ("click", function(e) {
+e.preventDefault();
+submenu.classList.toggle('active');
+console.log(menuArrow);
+});
