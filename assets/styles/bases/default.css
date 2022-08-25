@@ -1,5 +1,6 @@
 html {
   background: var(--variation-1);
+  overflow-x: hidden;
 }
 
 body,
