@@ -18,6 +18,8 @@ const _footer = document.querySelector("#main_footer");
 const logoFooter = document.querySelector("#logo_footer");
 const menuArrow = window.getComputedStyle(document.querySelector('p'), ':before') .getPropertyValue('content');
 
+// const main_slider = document.querySelector('#main_slider');
+
 /*PAIR HEIGHT and WIDTH TO THE SLIDER CONTAINER WITH ABSOLUTE POSITIONED <LI> ELEMENTS*/
 const autoSize = (ht1, ht2)=>{
     ht1.style.height= `${ht2.offsetHeight}px`;
@@ -69,6 +71,8 @@ const sliderActivation = e=>{
    if(footer) footer.classList.toggle('active');
    if(_footer) _footer.classList.toggle('active');
    if(logoFooter) logoFooter.classList.toggle('active');
+   if(slider) slider.classList.toggle('active');
+      window.addEventListener('resize', function(){autoSize(slider,slide)});
  });
  /*DEPLOY RESPOSNIVE MOBILE SUB-MENU*/
 submenuSelector.addEventListener ("click", function(e) {
