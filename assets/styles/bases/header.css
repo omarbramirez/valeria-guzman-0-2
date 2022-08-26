@@ -93,8 +93,7 @@ li:hover #submenu_options{
     position: absolute;
     top: -100vh;
     flex-direction: column;
-    height: 50vh;
-    padding: 50px 0;
+    padding-bottom: 100px;
   }
   #menu_options.active{
     opacity: 1;
